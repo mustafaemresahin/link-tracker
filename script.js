@@ -52,3 +52,20 @@ inputBtn.addEventListener("click", function() {
         showMessage("Please enter a valid URL.")
     }
 })
+
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        listItems += `
+            <div class="link-container">
+            <li id="lead-${i}" class="link">
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
+                </a>
+            </li>
+            <button class="delete-btn">Delete</button>
+            </div>
+        `
+    }
+    ulEl.innerHTML = listItems
+}
