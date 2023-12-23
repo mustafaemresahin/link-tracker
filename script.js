@@ -84,3 +84,15 @@ function deleteLead(index) {
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
 }
+
+function isValidHttpUrl(string) {
+    let url;
+    
+    try {
+        url = new URL(string);
+    } catch (_) {
+        return false;  
+    }
+
+    return url.protocol === "http:" || url.protocol === "https:";
+}
