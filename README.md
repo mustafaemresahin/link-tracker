@@ -10,3 +10,10 @@ Link Tracker is a user-friendly Chrome extension designed to help users efficien
 - **Delete Options**: Remove individual links or clear all saved links with simple button clicks.
 - **Toggle Information Display**: An information section provides helpful tips and can be shown or hidden as needed.
 
+## Installation
+1. Download the Link Tracker repository.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable Developer Mode (top right corner).
+4. Click on 'Load Unpacked' and select the downloaded Link Tracker folder.
+5. The extension icon (a link symbol) will now appear in your Chrome toolbar.
+
