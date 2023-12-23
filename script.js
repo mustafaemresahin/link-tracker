@@ -96,3 +96,8 @@ function isValidHttpUrl(string) {
 
     return url.protocol === "http:" || url.protocol === "https:";
 }
+
+function showMessage(message) {
+    messageEl.textContent = message
+    setTimeout(() => messageEl.textContent = '', 3000)
+}
