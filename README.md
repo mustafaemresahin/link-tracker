@@ -24,3 +24,6 @@ Link Tracker is a user-friendly Chrome extension designed to help users efficien
 - View your saved links in the displayed list. Click on any link to open it in a new tab.
 - Delete individual links using the 'Delete' button beside each or clear all links by double-clicking 'DELETE ALL' button.
 - For additional information on how to use the extension, click the 'INFO' button.
+
+## Contributing
+Contributions to Link Tracker are welcome. If you have suggestions for improvements or encounter any issues, please feel free to open an issue or submit a pull request on GitHub.
