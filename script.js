@@ -73,6 +73,7 @@ function render(leads) {
         `
     }
     ulEl.innerHTML = listItems
+    addDeleteButtonListeners();
 }
 
 function addDeleteButtonListeners() {
