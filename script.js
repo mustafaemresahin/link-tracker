@@ -69,3 +69,18 @@ function render(leads) {
     }
     ulEl.innerHTML = listItems
 }
+
+function addDeleteButtonListeners() {
+    const deleteButtons = document.querySelectorAll(".delete-btn")
+    deleteButtons.forEach((button, index) => {
+        button.addEventListener("click", function() {
+            deleteLead(index)
+        })
+    })
+}
+
+function deleteLead(index) {
+    myLeads.splice(index, 1)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
+}
