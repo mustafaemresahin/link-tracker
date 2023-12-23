@@ -9,6 +9,11 @@ const tabBtn = document.getElementById("tab-btn")
 const infoBtn = document.getElementById("info-btn")
 const info = document.getElementById("info-el")
 
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    render(myLeads)
+}
+
 infoBtn.addEventListener("click", function() {
     if(info.style.display == "none"){
         info.style.display = "block";
