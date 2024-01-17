@@ -42,6 +42,7 @@ deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
     render(myLeads)
+    showNotification("All links are deleted!")
 })
 
 inputBtn.addEventListener("click", function() {
