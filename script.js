@@ -4,6 +4,7 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const messageEl = document.getElementById("message-el")
+const notificationEl = document.getElementById("notification-el")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 const tabBtn = document.getElementById("tab-btn")
 const infoBtn = document.getElementById("info-btn")
@@ -30,6 +31,7 @@ tabBtn.addEventListener("click", function(){
             myLeads.push(url)
             localStorage.setItem("myLeads", JSON.stringify(myLeads))
             render(myLeads)
+            showNotification("Tab saved!")
         } else {
             showMessage("This tab is already saved.")
         }
@@ -50,6 +52,7 @@ inputBtn.addEventListener("click", function() {
             inputEl.value = ""
             localStorage.setItem("myLeads", JSON.stringify(myLeads))
             render(myLeads)
+            showNotification("Link saved!")
         } else {
             showMessage("This link is already saved.")
         }
@@ -89,6 +92,7 @@ function deleteLead(index) {
     myLeads.splice(index, 1)
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
+    showNotification("Link is deleted!")
 }
 
 function isValidHttpUrl(string) {
@@ -106,4 +110,9 @@ function isValidHttpUrl(string) {
 function showMessage(message) {
     messageEl.textContent = message
     setTimeout(() => messageEl.textContent = '', 3000)
+}
+
+function showNotification(notification) {
+    notificationEl.textContent = notification
+    setTimeout(() => notificationEl.textContent = '', 3000)
 }
