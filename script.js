@@ -31,7 +31,7 @@ tabBtn.addEventListener("click", function(){
             myLeads.push(url)
             localStorage.setItem("myLeads", JSON.stringify(myLeads))
             render(myLeads)
-            showNotification("Tab saved!")
+            showNotification("Tab is saved!")
         } else {
             showMessage("This tab is already saved.")
         }
@@ -52,7 +52,7 @@ inputBtn.addEventListener("click", function() {
             inputEl.value = ""
             localStorage.setItem("myLeads", JSON.stringify(myLeads))
             render(myLeads)
-            showNotification("Link saved!")
+            showNotification("Link is saved!")
         } else {
             showMessage("This link is already saved.")
         }
