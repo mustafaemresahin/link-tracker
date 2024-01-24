@@ -73,6 +73,7 @@ function render(leads) {
                 </a>
             </li>
             <button class="delete-btn">Delete</button>
+            <button class="copy-btn">Copy</button>
             </div>
         `
     }

@@ -97,6 +97,18 @@ ul {
     max-height: 30px;
 }
 
+.copy-btn {
+    background-color: #6933ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    max-height: 30px;
+}
+
 .delete-btn:hover {
     background-color: #ff4d4d;
 }
