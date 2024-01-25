@@ -63,21 +63,21 @@ inputBtn.addEventListener("click", function() {
 })
 
 function render(leads) {
-    let listItems = ""
+    let listItems = "";
     for (let i = 0; i < leads.length; i++) {
         listItems += `
             <div class="link-container">
-            <li id="lead-${i}" class="link">
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
-                </a>
-            </li>
-            <button class="delete-btn">Delete</button>
-            <button class="copy-btn">Copy</button>
+                <li id="lead-${i}" class="link">
+                    <a target='_blank' href='${leads[i]}'>
+                        ${leads[i]}
+                    </a>
+                </li>
+                <button class="delete-btn">Delete</button>
+                <button class="copy-btn" onclick="copyLink('${leads[i]}')" link-data="${leads[i]}">Copy</button>
             </div>
-        `
+        `;
     }
-    ulEl.innerHTML = listItems
+    ulEl.innerHTML = listItems;
     addDeleteButtonListeners();
 }
 
@@ -118,3 +118,18 @@ function showNotification(notification) {
     notificationEl.textContent = notification
     setTimeout(() => notificationEl.textContent = '', 3000)
 }
+
+
+document.querySelectorAll('.copy-btn').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        const url = e.target.getAttribute('link-data');
+        console.log('URL:', url); // Add this line for debugging
+        navigator.clipboard.writeText(url).then(function() {
+            e.target.textContent = 'Copied!';
+            setTimeout(function() {
+                e.target.textContent = 'Copy';
+            }, 2000);
+        });
+    });
+});
+
